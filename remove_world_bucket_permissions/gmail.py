@@ -4,11 +4,11 @@ import logging
 def send_email(body):
     """send email alert"""
     logging.info('Sending email')
-    recipient = 'erpost@joinallofus.net'
+    recipient = ''
     subject = 'Daily Risk Posture for Google Cloud'
 
     # gmail sign-in
-    gmail_sender = 'gcp.notifications@gmail.com'
+    gmail_sender = ''
     gmail_passwd = ''
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
