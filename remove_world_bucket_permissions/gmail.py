@@ -9,7 +9,7 @@ def send_email(body):
 
     # gmail sign-in
     gmail_sender = 'gcp.notifications@gmail.com'
-    gmail_passwd = 'wrznocyvwbilyder'
+    gmail_passwd = ''
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
