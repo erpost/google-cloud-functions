@@ -1,15 +1,16 @@
 import smtplib
 import logging
+import credentials
 
 def send_email(body):
     """send email alert"""
     logging.info('Sending email')
-    recipient = ''
+    recipient = credentials.get_recipient_email()
     subject = 'Daily Risk Posture for Google Cloud'
 
     # gmail sign-in
-    gmail_sender = ''
-    gmail_passwd = ''
+    gmail_sender = credentials.get_sender_email()
+    gmail_passwd = get_password()
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
