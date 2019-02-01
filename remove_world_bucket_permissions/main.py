@@ -12,7 +12,7 @@ def remove_world_readable_buckets(event, context):
 
     # open tempfile
     findings = TemporaryFile()
-    opener = 'Hello, \n\nBelow are findings for Google Cloud.\n\n'
+    opener = 'Hello, \n\nBelow are Google Cloud Storage World-Readable Permission Issues:\n\n'
     findings.write(bytes(opener, 'UTF-8'))
 
     logging.info('-----Checking for world-readable bucket permissions-----')

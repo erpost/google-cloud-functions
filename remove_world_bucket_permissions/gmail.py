@@ -6,11 +6,11 @@ def send_email(body):
     """send email alert"""
     logging.info('Sending email')
     recipient = credentials.get_recipient_email()
-    subject = 'Daily Risk Posture for Google Cloud'
+    subject = 'Security Alert for Google Cloud Storage'
 
     # gmail sign-in
     gmail_sender = credentials.get_sender_email()
-    gmail_passwd = get_password()
+    gmail_passwd = credentials.get_password()
     try:
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.ehlo()
