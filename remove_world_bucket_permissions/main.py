@@ -6,7 +6,7 @@ import logging
 
 
 def remove_world_readable_buckets(event, context):
-    """logs world-readable buckets with AllUsers or AllAuthenticatedUsers permissions"""
+    """removes AllUsers or AllAuthenticatedUsers permissions from Google Cloud Buckets"""
     alert = False
     world_bucket_total = []
 
@@ -70,6 +70,7 @@ def get_projects():
         request = service.projects().list_next(previous_request=request, previous_response=response)
 
     return project_list
+
 
 if __name__ == '__main__':
     remove_world_readable_buckets(None, None)
